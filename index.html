@@ -21,6 +21,7 @@
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
     }
+
     *{ box-sizing:border-box; }
     body{
       margin:0;
@@ -34,17 +35,20 @@
       min-height:100svh;
       padding: 18px 14px 28px;
     }
+
     .wrap{ max-width: 980px; margin: 0 auto; }
+
     header{
       position: sticky;
       top: 0;
       z-index: 50;
       padding: 10px 10px 14px;
       backdrop-filter: blur(10px);
-      background: linear-gradient(180deg, rgba(7,8,18,.85), rgba(7,8,18,.55));
+      background: linear-gradient(180deg, rgba(7,8,18,.90), rgba(7,8,18,.60));
       border-bottom: 1px solid rgba(255,255,255,.08);
       margin: -18px -14px 14px;
     }
+
     .title{
       display:flex;
       align-items:flex-end;
@@ -64,12 +68,14 @@
       color: var(--muted);
       opacity: .95;
     }
+
     .controls{
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 10px;
       padding: 0 6px;
     }
+
     .control{
       background: var(--panel);
       border: var(--border);
@@ -77,6 +83,7 @@
       padding: 10px;
       box-shadow: var(--shadow);
     }
+
     label{
       display:block;
       font-family: var(--mono);
@@ -85,7 +92,8 @@
       margin-bottom: 8px;
       letter-spacing: .25px;
     }
-    select, button{
+
+    select{
       width:100%;
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,.14);
@@ -97,14 +105,7 @@
       -webkit-tap-highlight-color: transparent;
     }
     select:focus{ border-color: rgba(0,245,255,.55); box-shadow: 0 0 0 3px rgba(0,245,255,.12); }
-    .btn{
-      cursor:pointer;
-      font-family: var(--mono);
-      letter-spacing:.25px;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, rgba(0,245,255,.18), rgba(255,43,214,.18));
-    }
-    .btn:active{ transform: translateY(1px); }
+
     .badge{
       display:inline-flex;
       align-items:center;
@@ -118,6 +119,7 @@
       color: var(--muted);
       margin: 10px 6px 0;
     }
+
     .dot{
       width:9px;
       height:9px;
@@ -125,12 +127,14 @@
       background: var(--neon1);
       box-shadow: 0 0 12px rgba(0,245,255,.75);
     }
+
     .grid{
       display:grid;
       grid-template-columns: 1fr;
       gap: 12px;
       margin-top: 12px;
     }
+
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
       border: 1px solid rgba(255,255,255,.10);
@@ -138,6 +142,7 @@
       box-shadow: var(--shadow);
       overflow:hidden;
     }
+
     .cardHead{
       display:flex;
       align-items:center;
@@ -152,15 +157,27 @@
         rgba(0,0,0,.20);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
+
     .dayTitle{ display:flex; flex-direction:column; gap: 2px; min-width: 0; }
+
     .dayTitle .name{
-      font-size: 15px; margin:0; letter-spacing:.3px;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      font-size: 15px;
+      margin:0;
+      letter-spacing:.3px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
+
     .dayTitle .focus{
-      font-family: var(--mono); font-size: 11px; color: var(--muted);
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
+
     .chip{
       flex: 0 0 auto;
       display:inline-flex;
@@ -174,13 +191,17 @@
       font-size: 12px;
       color: var(--text);
     }
+
     .chip .chipDot{
       width:8px;height:8px;border-radius:50%;
       background: var(--neon2);
       box-shadow: 0 0 12px rgba(255,43,214,.7);
     }
+
     .cardBody{ padding: 12px 14px 14px; }
+
     .meta{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 10px; }
+
     .pill{
       display:inline-flex;
       align-items:center;
@@ -193,17 +214,24 @@
       font-size: 11px;
       color: var(--muted);
     }
+
     .pill b{ color: var(--text); font-weight: 600; }
+
     ol.ex{ list-style: none; padding: 0; margin: 0; display:grid; gap: 10px; }
+
     .ex li{
       background: rgba(0,0,0,.22);
       border: 1px solid rgba(255,255,255,.10);
       border-radius: 14px;
       padding: 10px 10px;
     }
+
     .row{ display:flex; align-items:flex-start; justify-content:space-between; gap: 10px; }
+
     .exName{ font-size: 14px; margin: 0; line-height: 1.25; }
+
     .rx{ font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 5px; line-height: 1.35; }
+
     .tag{
       flex: 0 0 auto;
       font-family: var(--mono);
@@ -215,12 +243,12 @@
       background: rgba(0,0,0,.18);
       white-space: nowrap;
     }
+
     .tag.neon1{ border-color: rgba(0,245,255,.32); box-shadow: 0 0 0 2px rgba(0,245,255,.08) inset; }
     .tag.neon2{ border-color: rgba(255,43,214,.32); box-shadow: 0 0 0 2px rgba(255,43,214,.08) inset; }
     .tag.neon3{ border-color: rgba(166,255,0,.28); box-shadow: 0 0 0 2px rgba(166,255,0,.07) inset; }
     .tag.warn{ border-color: rgba(255,204,0,.35); box-shadow: 0 0 0 2px rgba(255,204,0,.10) inset; }
-    details{ border-radius: var(--radius); }
-    details[open] .cardHead{ border-bottom-color: rgba(255,255,255,.10); }
+
     .hint{
       margin: 14px 6px 0;
       background: rgba(0,0,0,.22);
@@ -232,6 +260,7 @@
       line-height: 1.35;
     }
     .hint b{ color: var(--text); }
+
     .foot{
       margin: 14px 6px 0;
       font-family: var(--mono);
@@ -239,6 +268,10 @@
       font-size: 11px;
       line-height: 1.35;
     }
+
+    /* iOS Safari tap tweaks */
+    summary { list-style: none; }
+    summary::-webkit-details-marker{ display:none; }
   </style>
 </head>
 <body>
@@ -247,7 +280,7 @@
       <div class="title">
         <div>
           <h1>Тренировочный цикл 6 недель</h1>
-          <div class="sub">СР—ВС (5 дней) · Отдых ПН/ВТ · Старт 07:30 · Функциональность</div>
+          <div class="sub">СР—ВС (5 дней) · Отдых ПН/ВТ · Старт 07:30</div>
         </div>
       </div>
       <div class="controls">
@@ -262,28 +295,24 @@
             <option value="6">Неделя 6 — Разгрузка</option>
           </select>
         </div>
-        <div class="control">
-          <label>&nbsp;</label>
-          <button class="btn" id="expand">Открыть все дни</button>
-        </div>
       </div>
-      <div class="badge"><span class="dot"></span><span id="ruleLine">Правила недели загрузятся…</span></div>
+      <div class="badge"><span class="dot"></span><span id="ruleLine">—</span></div>
     </header>
 
     <section class="grid" id="days"></section>
 
     <div class="hint" id="notes"></div>
-    <div class="foot">Совет: файл можно отправить себе в Telegram/почту и открыть на телефоне; на Android/Chrome — «Добавить на главный экран».</div>
+    <div class="foot">Подсказка: открывайте страницу в Safari/Chrome (не во встроенном просмотрщике Telegram), тогда переключатель недели работает.</div>
   </div>
 
   <script>
     const weeks = {
-      1: { name:'Неделя 1 — Адаптация', rulesLine:'Режим: 3–4 подхода · 8–12 повторов · отдых 60–90с · без отказа.', notes:'<b>Памятка:</b> держите 2–3 повтора в запасе (RIR 2–3); темп опускания 2–3с; задача — техника и ритм.' },
-      2: { name:'Неделя 2 — Адаптация', rulesLine:'Режим: 3–4 подхода · 8–12 повторов · отдых 60–90с · +малый прогресс.', notes:'<b>Памятка:</b> прогрессируйте одним шагом: +1–2 повтора или +2.5–5% веса (если техника не рушится).' },
-      3: { name:'Неделя 3 — Интенсификация', rulesLine:'База: 5 подходов · 6–8 повторов · отдых 90–120с · 1 негатив в конце (4с).', notes:'<b>Памятка:</b> негатив (4с) — только в последнем подходе базовых движений.' },
-      4: { name:'Неделя 4 — Интенсификация', rulesLine:'База: 5 подходов · 6–8 повторов · отдых 90–120с · удерживаем качество.', notes:'<b>Памятка:</b> если усталость растет — держите вес, но улучшайте контроль (пауза 1с в пик-точке на изоляции).' },
-      5: { name:'Неделя 5 — Пик', rulesLine:'Пик: +1 подход · последний подход близко к отказу · дроп-сеты в тренажерах.', notes:'<b>Памятка:</b> дроп-сеты (−30% веса) делайте: разгибания ног, тяга блока, бицепс на блоке.' },
-      6: { name:'Неделя 6 — Разгрузка', rulesLine:'Deload: −30–40% веса · 2–3 подхода · без отказа · мобилити.', notes:'<b>Памятка:</b> цель — восстановление. Заканчивайте каждый сет с большим запасом (RIR 4–5).' }
+      1: { name:'Неделя 1 — Адаптация', rulesLine:'3–4 подхода · 8–12 повторов · отдых 60–90с · без отказа.', notes:'<b>Помнить:</b> держите 2–3 повтора в запасе; опускание 2–3с; цель — техника.' },
+      2: { name:'Неделя 2 — Адаптация', rulesLine:'3–4 подхода · 8–12 повторов · отдых 60–90с · небольшой прогресс.', notes:'<b>Помнить:</b> прогресс 1 шаг: +1–2 повтора или +2.5–5% веса при чистой технике.' },
+      3: { name:'Неделя 3 — Интенсификация', rulesLine:'База 5 сетов · 6–8 повторов · отдых 90–120с · негатив 4с (посл. сет базовых).', notes:'<b>Помнить:</b> негативы только на: жим лежа, жим ногами, тяга гориз. блока, РТД.' },
+      4: { name:'Неделя 4 — Интенсификация', rulesLine:'База 5 сетов · 6–8 повторов · отдых 90–120с · качество > вес.', notes:'<b>Помнить:</b> если усталость растет — держите вес, улучшайте контроль (пауза 1с на изоляции).' },
+      5: { name:'Неделя 5 — Пик', rulesLine:'+1 подход к упражнениям · последний подход близко к отказу · дроп-сеты в тренажерах.', notes:'<b>Помнить:</b> дроп-сеты (−30% веса) только в тренажерах: разгибание ног, тяга блока, бицепс на блоке.' },
+      6: { name:'Неделя 6 — Разгрузка', rulesLine:'−30–40% веса · 2–3 подхода · без отказа · восстановление.', notes:'<b>Помнить:</b> цель — восстановление; заканчивайте каждый сет с большим запасом.' }
     };
 
     const baseDays = [
@@ -293,39 +322,39 @@
         {name:'Разведение гантелей лёжа', base:'3×10–12', inten:'3×10–12 (контроль)', peak:'3×10–12', deload:'2×10–12', tag:'Изоляция', color:'neon3'},
         {name:'Жим в Смите на наклонной', base:'3×8–10', inten:'4×6–8', peak:'+1 сет', deload:'2×10–12', tag:'Тренажёр', color:'neon2'},
         {name:'Шраги', base:'3×12', inten:'3×8–10 (пауза 1–2с)', peak:'+1 сет', deload:'2×12', tag:'Трапеции', color:'neon3'},
-        {name:'Трицепс на блоке (разгибание)', base:'3×12–15', inten:'3×10–12 (пауза 1с)', peak:'3×10–12 (дроп-сет опц.)', deload:'2×12–15', tag:'Памп', color:'neon1'}
+        {name:'Трицепс на блоке', base:'3×12–15', inten:'3×10–12 (пауза 1с)', peak:'3×10–12 (дроп опц.)', deload:'2×12–15', tag:'Памп', color:'neon1'}
       ]},
       { title:'ЧЕТВЕРГ — Низ A', focus:'Квадрицепс · Колени (бережно)', ex:[
         {name:'Разгибание ног (разогрев)', base:'2×15', inten:'2×12–15', peak:'2×12–15', deload:'1–2×15', tag:'Разогрев', color:'warn'},
         {name:'Жим ногами (стопы посередине)', base:'4×10–12', inten:'5×6–8 + негатив (посл. сет)', peak:'+1 сет, посл. сет близко к отказу', deload:'3×10–12 (−30–40%)', tag:'База', color:'neon1'},
         {name:'Жим ногами (высоко/широко)', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Ягодицы', color:'neon2'},
-        {name:'Разгибание ног (добивка)', base:'3×12', inten:'3×8–10', peak:'3×8–10 (дроп-сет)', deload:'2×12–15', tag:'Дроп', color:'neon3'},
-        {name:'Сгибание ног (для баланса)', base:'2×12', inten:'2×8–10', peak:'2–3×8–10', deload:'1–2×12', tag:'Бицепс бедра', color:'neon2'}
+        {name:'Разгибание ног (добивка)', base:'3×12', inten:'3×8–10', peak:'3×8–10 (дроп)', deload:'2×12–15', tag:'Дроп', color:'neon3'},
+        {name:'Сгибание ног (баланс)', base:'2×12', inten:'2×8–10', peak:'2–3×8–10', deload:'1–2×12', tag:'Бедро', color:'neon2'}
       ]},
       { title:'ПЯТНИЦА — Верх B', focus:'Спина · Задняя дельта · Бицепс', ex:[
-        {name:'Тяга горизонтального блока (широкий хват)', base:'4×10–12', inten:'5×6–8 + негатив (посл. сет)', peak:'+1 сет, посл. сет близко к отказу', deload:'3×10–12 (−30–40%)', tag:'База', color:'neon1'},
-        {name:'Тяга вертикального блока (к груди)', base:'3×10–12', inten:'3–4×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Широчайшие', color:'neon2'},
-        {name:'Обратная бабочка (пек-дек)', base:'3×12–15', inten:'3×10–12 (пауза 1с)', peak:'3×10–12', deload:'2×12–15', tag:'Задн. дельта', color:'neon3'},
-        {name:'Сгибания с гантелями', base:'3×10–12', inten:'4×6–8 (контроль)', peak:'+1 сет', deload:'2×10–12', tag:'Бицепс', color:'neon2'},
-        {name:'Бицепс на блоке', base:'3×12', inten:'3×8–10', peak:'3×8–10 (дроп-сет)', deload:'2×12', tag:'Дроп', color:'neon3'}
+        {name:'Тяга гориз. блока (широкий)', base:'4×10–12', inten:'5×6–8 + негатив (посл. сет)', peak:'+1 сет, посл. сет близко к отказу', deload:'3×10–12 (−30–40%)', tag:'База', color:'neon1'},
+        {name:'Тяга вертик. блока (к груди)', base:'3×10–12', inten:'3–4×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Широч.', color:'neon2'},
+        {name:'Обратная бабочка (пек-дек)', base:'3×12–15', inten:'3×10–12 (пауза 1с)', peak:'3×10–12', deload:'2×12–15', tag:'Дельта', color:'neon3'},
+        {name:'Сгибания с гантелями', base:'3×10–12', inten:'4×6–8', peak:'+1 сет', deload:'2×10–12', tag:'Бицепс', color:'neon2'},
+        {name:'Бицепс на блоке', base:'3×12', inten:'3×8–10', peak:'3×8–10 (дроп)', deload:'2×12', tag:'Дроп', color:'neon3'}
       ]},
       { title:'СУББОТА — Низ B', focus:'Задняя цепь · Ягодицы · Спина', ex:[
-        {name:'Румынская тяга (гантели/штанга)', base:'4×10–12', inten:'5×6–8 + негатив (посл. сет)', peak:'+1 сет, посл. сет близко к отказу', deload:'3×10–12 (−30–40%)', tag:'База', color:'neon1'},
-        {name:'Сгибание ног сидя', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Бицепс бедра', color:'neon2'},
-        {name:'Жим ногами (высокая постановка)', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Ягодицы', color:'neon2'},
+        {name:'Румынская тяга', base:'4×10–12', inten:'5×6–8 + негатив (посл. сет)', peak:'+1 сет, посл. сет близко к отказу', deload:'3×10–12 (−30–40%)', tag:'База', color:'neon1'},
+        {name:'Сгибание ног сидя', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Бедро', color:'neon2'},
+        {name:'Жим ногами (высокая)', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Ягод.', color:'neon2'},
         {name:'Гиперэкстензия', base:'3×12', inten:'3×8–10', peak:'+1 сет', deload:'1–2×12', tag:'Кор', color:'neon3'}
       ]},
       { title:'ВОСКРЕСЕНЬЕ — Кардио', focus:'Ходьба · Зона 2 · Восстановление', ex:[
-        {name:'Быстрая ходьба', base:'45 мин · зона 2', inten:'55–60 мин · зона 2', peak:'60 мин · зона 2 (наклон выше)', deload:'30–40 мин · зона 1–2', tag:'Зона 2', color:'neon1'},
-        {name:'Настройка (если дорожка)', base:'5.5–6.5 км/ч · наклон 2–4%', inten:'наклон 4–7%', peak:'наклон 6–10% (без бега)', deload:'наклон 0–3%', tag:'Тредмил', color:'neon2'},
+        {name:'Ходьба (зона 2)', base:'45 мин', inten:'55–60 мин', peak:'60 мин (наклон выше)', deload:'30–40 мин (легко)', tag:'Зона 2', color:'neon1'},
+        {name:'Дорожка: скорость/наклон', base:'5.5–6.5 км/ч · 2–4%', inten:'4–7%', peak:'6–10% (без бега)', deload:'0–3%', tag:'Тредмил', color:'neon2'},
         {name:'Мобильность после', base:'10–15 мин', inten:'15 мин', peak:'20 мин', deload:'15–20 мин', tag:'Мобилити', color:'neon3'}
       ]}
     ];
 
     function getRxForWeek(ex, week){
-      if(week==6) return ex.deload;
-      if(week==5) return ex.peak;
-      if(week==3 || week==4) return ex.inten;
+      if(week===6) return ex.deload;
+      if(week===5) return ex.peak;
+      if(week===3 || week===4) return ex.inten;
       return ex.base;
     }
 
@@ -334,7 +363,7 @@
       document.getElementById('ruleLine').textContent = weeks[week].rulesLine;
       document.getElementById('notes').innerHTML =
         weeks[week].notes +
-        '<br><br><b>Мини-настройки:</b> разминка 7–10 мин + 1–2 разминочных подхода в первом упражнении; отдых держите по таймеру; если болит сустав — заменяйте на тренажёр/снижайте вес.';
+        '<br><br><b>Минимум:</b> разминка 7–10 мин; 1–2 разминочных подхода в первом упражнении; если болит сустав — замените на тренажёр/снизьте вес.';
 
       const daysEl = document.getElementById('days');
       daysEl.innerHTML = '';
@@ -351,7 +380,7 @@
             <div class="name">${d.title}</div>
             <div class="focus">${d.focus}</div>
           </div>
-          <div class="chip"><span class="chipDot"></span><span>${weeks[week].name.split(' — ')[0]}</span></div>
+          <div class="chip"><span class="chipDot"></span><span>Неделя ${week}</span></div>
         `;
 
         const body = document.createElement('div');
@@ -370,12 +399,12 @@
             <div class="pill"><b>База:</b> 5 сетов</div>
             <div class="pill"><b>Повторы:</b> 6–8</div>
             <div class="pill"><b>Отдых:</b> 90–120с</div>
-            <div class="pill"><b>Негатив:</b> 4с (посл. сет)</div>
+            <div class="pill"><b>Негатив:</b> 4с</div>
           `;
-        }else if(week==5){
+        }else if(week===5){
           meta.innerHTML = `
-            <div class="pill"><b>+1 сет</b> к большинству</div>
-            <div class="pill"><b>Близко к отказу</b> (посл. сет)</div>
+            <div class="pill"><b>+1 сет</b></div>
+            <div class="pill"><b>Близко к отказу</b></div>
             <div class="pill"><b>Дроп</b> (тренажёры)</div>
           `;
         }else{
@@ -411,20 +440,9 @@
         details.appendChild(body);
         daysEl.appendChild(details);
       });
-
-      const btn = document.getElementById('expand');
-      const allOpen = [...document.querySelectorAll('details.card')].every(d => d.open);
-      btn.textContent = allOpen ? 'Свернуть все дни' : 'Открыть все дни';
     }
 
     document.getElementById('week').addEventListener('change', render);
-    document.getElementById('expand').addEventListener('click', () => {
-      const cards = [...document.querySelectorAll('details.card')];
-      const allOpen = cards.every(d => d.open);
-      cards.forEach(d => d.open = !allOpen);
-      render();
-    });
-
     render();
   </script>
 </body>
