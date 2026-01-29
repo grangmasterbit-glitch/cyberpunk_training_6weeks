@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>6-недельный цикл — киберпанк</title>
   <style>
+    /* ... (стили те же, без изменений) ... */
     :root{
       --bg:#070812;
       --panel:rgba(255,255,255,.06);
@@ -39,16 +40,16 @@
     .wrap{ max-width: 980px; margin: 0 auto; }
 
     header{
-  position: relative;
-  margin-top: 18px;
-  z-index: 50;
-  padding: 10px 10px 14px;
-  background: linear-gradient(180deg, rgba(7,8,18,.90), rgba(7,8,18,.60));
-  border-bottom: 1px solid rgba(255,255,255,.08));
-  margin: 0 0 14px;
-  border-radius: 0 0 18px 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.45);
-}
+      position: relative;
+      margin-top: 18px;
+      z-index: 50;
+      padding: 10px 10px 14px;
+      background: linear-gradient(180deg, rgba(7,8,18,.90), rgba(7,8,18,.60));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin: 0 0 14px;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.45);
+    }
 
     .title{
       display:flex;
@@ -327,10 +328,10 @@
       ]},
       { title:'ЧЕТВЕРГ — Низ A', focus:'Квадрицепс · Колени (бережно)', ex:[
         {name:'Разгибание ног (разогрев)', base:'2×15', inten:'2×12–15', peak:'2×12–15', deload:'1–2×15', tag:'Разогрев', color:'warn'},
-        {name:'Жим ногами (стопы посередине)', base:'4×10–12', inten:'5×6–8 + негатив (посл. сет)', peak:'+1 сет, посл. сет близко к отказу', deload:'3×10–12 (−30–40%)', tag:'База', color:'neon1'},
+        {name:'Жим ногами (обычная)', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'База', color:'neon1'},
         {name:'Жим ногами (высоко/широко)', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Ягодицы', color:'neon2'},
-        {name:'Разгибание ног (добивка)', base:'3×12', inten:'3×8–10', peak:'3×8–10 (дроп)', deload:'2×12–15', tag:'Дроп', color:'neon3'},
-        {name:'Сгибание ног (баланс)', base:'2×12', inten:'2×8–10', peak:'2–3×8–10', deload:'1–2×12', tag:'Бедро', color:'neon2'}
+        {name:'Сгибание ног (баланс)', base:'2×12', inten:'2×8–10', peak:'2–3×8–10', deload:'1–2×12', tag:'Бедро', color:'neon2'},
+        {name:'Разгибание ног (добивка)', base:'3×12', inten:'3×8–10', peak:'3×8–10 (дроп)', deload:'2×12–15', tag:'Дроп', color:'neon3'}
       ]},
       { title:'ПЯТНИЦА — Верх B', focus:'Спина · Задняя дельта · Бицепс', ex:[
         {name:'Тяга гориз. блока (широкий)', base:'4×10–12', inten:'5×6–8 + негатив (посл. сет)', peak:'+1 сет, посл. сет близко к отказу', deload:'3×10–12 (−30–40%)', tag:'База', color:'neon1'},
@@ -344,6 +345,8 @@
         {name:'Сгибание ног сидя', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Бедро', color:'neon2'},
         {name:'Жим ногами (высокая)', base:'3×10–12', inten:'3×8–10', peak:'+1 сет', deload:'2×10–12', tag:'Ягод.', color:'neon2'},
         {name:'Гиперэкстензия', base:'3×12', inten:'3×8–10', peak:'+1 сет', deload:'1–2×12', tag:'Кор', color:'neon3'}
+        ,{name:'Сведение рук в кроссовере (high-to-low)', base:'3×12–15', inten:'3×10–12 (пауза 1с)', peak:'3×12–15 (суперсет)', deload:'2×12–15', tag:'Грудь', color:'neon2'}
+        ,{name:'Брусья (гравитрон) — акцент низ груди', base:'3×8–12', inten:'3×6–10 (негатив 4с)', peak:'4×8–12 (меньше помощи)', deload:'2×8–10', tag:'Грудь', color:'neon1'}
       ]},
       { title:'ВОСКРЕСЕНЬЕ — Кардио', focus:'Ходьба · Зона 2 · Восстановление', ex:[
         {name:'Ходьба (зона 2)', base:'45 мин', inten:'55–60 мин', peak:'60 мин (наклон выше)', deload:'30–40 мин (легко)', tag:'Зона 2', color:'neon1'},
@@ -448,5 +451,3 @@
   </script>
 </body>
 </html>
-
-
